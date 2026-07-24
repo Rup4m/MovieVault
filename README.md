@@ -3,6 +3,10 @@ Movie Vaul by Rupam is a kind of website thats help you to organize you movie in
 heres the ui of my website.
 <img width="1904" height="904" alt="image" src="https://github.com/user-attachments/assets/cc4b4207-33d7-4d95-ae5f-017b497d3737" />
 
+
+<img width="1356" height="833" alt="image" src="https://github.com/user-attachments/assets/a652abdd-cd83-4ba1-bd32-32ec963e9fc1" />
+
+
 <img width="1561" height="824" alt="image" src="https://github.com/user-attachments/assets/8d8574e4-2690-49f6-8905-dbcfcb518885" />
 
 <img width="385" height="603" alt="image" src="https://github.com/user-attachments/assets/cabda7ec-589e-48f8-aaba-15b8459777be" />
