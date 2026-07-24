@@ -1,0 +1,1508 @@
+/* =====================================================
+   MovieVault
+   Main Stylesheet
+   Part 1 - Global + Navbar + Hero
+===================================================== */
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================
+   CSS Variables
+========================== */
+
+:root{
+
+    --primary:#e50914;
+    --primary-hover:#b80710;
+
+    --bg:#0f172a;
+    --bg2:#111827;
+
+    --card:#1e293b;
+
+    --text:#ffffff;
+
+    --text-light:#94a3b8;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+
+    --radius:18px;
+
+}
+
+/* ==========================
+   Reset
+========================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+   Scrollbar
+========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08101d;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+/* ==========================
+   Common
+========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+/* ==========================
+   Header
+========================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    backdrop-filter:blur(16px);
+
+    background:rgba(15,23,42,.78);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+/* ==========================
+   Navbar
+========================== */
+
+.navbar{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+/* ==========================
+   Logo
+========================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+}
+
+.logo i{
+
+    color:var(--primary);
+
+    font-size:34px;
+
+}
+
+.logo span{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================
+   Navigation
+========================== */
+
+.nav-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+.nav-menu a{
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.nav-menu a:hover{
+
+    color:var(--primary);
+
+}
+
+.nav-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+.nav-menu a:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================
+   Theme Button
+========================== */
+
+#themeBtn{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.35s;
+
+}
+
+#themeBtn:hover{
+
+    background:var(--primary);
+
+    transform:rotate(20deg);
+
+}
+
+/* ==========================
+   Hero
+========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 10% 60px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Background Image */
+
+.hero{
+
+    background:url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1920&auto=format&fit=crop");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+/* Dark Overlay */
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(15,23,42,.45),
+
+        rgba(15,23,42,.95)
+
+    );
+
+}
+
+/* ==========================
+   Hero Content
+========================== */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+}
+
+.hero-content h1{
+
+    font-size:70px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+}
+
+.hero-content h1 span{
+
+    color:var(--primary);
+
+}
+
+.hero-content p{
+
+    font-size:20px;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+}
+
+/* ==========================
+   Search Box
+========================== */
+
+.search-box{
+
+    width:100%;
+
+    max-width:720px;
+
+    margin:auto;
+
+    display:flex;
+
+    overflow:hidden;
+
+    border-radius:60px;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:22px 28px;
+
+    font-size:17px;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.search-box button{
+
+    width:90px;
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+.search-box button:hover{
+
+    background:var(--primary-hover);
+
+}
+
+/* ==========================
+   Floating Glow
+========================== */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    left:-120px;
+
+    top:100px;
+
+    background:rgba(229,9,20,.18);
+
+    filter:blur(140px);
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    right:-100px;
+
+    bottom:60px;
+
+    background:rgba(59,130,246,.18);
+
+    filter:blur(140px);
+
+}
+
+/* ==========================
+   Hero Animation
+========================== */
+
+.hero-content{
+
+    animation:fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+   MovieVault
+   Part 2 - Sections + Movie Cards + Footer
+===================================================== */
+
+
+/* ==========================
+   Sections
+========================== */
+
+.section{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:90px auto;
+
+}
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    margin-bottom:40px;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.section-header h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+.section-header p{
+
+    color:var(--text-light);
+
+    font-size:16px;
+
+}
+
+
+/* ==========================
+   Movie Grid
+========================== */
+
+.movie-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+}
+
+
+/* ==========================
+   Movie Card
+========================== */
+
+.movie-card{
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.movie-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(229,9,20,.35);
+
+}
+
+
+/* ==========================
+   Poster
+========================== */
+
+.movie-poster{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.movie-poster img{
+
+    width:100%;
+
+    height:360px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.movie-card:hover .movie-poster img{
+
+    transform:scale(1.08);
+
+}
+
+
+/* ==========================
+   Poster Overlay
+========================== */
+
+.poster-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        to top,
+
+        rgba(0,0,0,.85),
+
+        rgba(0,0,0,.1)
+
+    );
+
+    opacity:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.35s;
+
+}
+
+.movie-card:hover .poster-overlay{
+
+    opacity:1;
+
+}
+
+
+/* ==========================
+   Trailer Button
+========================== */
+
+.play-btn{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:rgba(255,255,255,.95);
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.play-btn:hover{
+
+    transform:scale(1.12);
+
+}
+
+
+/* ==========================
+   Movie Info
+========================== */
+
+.movie-info{
+
+    padding:22px;
+
+}
+
+.movie-title{
+
+    font-size:20px;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+    line-height:1.4;
+
+    min-height:56px;
+
+}
+
+.movie-meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+}
+
+.rating{
+
+    color:#FFD700;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================
+   Buttons
+========================== */
+
+.card-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.watch-btn{
+
+    flex:1;
+
+    border:none;
+
+    padding:13px;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.watch-btn:hover{
+
+    background:var(--primary-hover);
+
+}
+
+.trailer-btn{
+
+    width:55px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#334155;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.trailer-btn:hover{
+
+    background:#475569;
+
+}
+
+
+/* ==========================
+   Badge
+========================== */
+
+.badge{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================
+   Empty Search
+========================== */
+
+.empty-state{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:80px 20px;
+
+    color:var(--text-light);
+
+}
+
+.empty-state i{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+    color:var(--primary);
+
+}
+
+.empty-state h3{
+
+    margin-bottom:10px;
+
+}
+
+
+/* ==========================
+   Loading
+========================== */
+
+.loading-section{
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px 0;
+
+}
+
+.loader{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    border:7px solid rgba(255,255,255,.15);
+
+    border-top:7px solid var(--primary);
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+
+    margin-top:120px;
+
+    background:#08101d;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+.footer-content{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:60px 0;
+
+    text-align:center;
+
+}
+
+.footer-content h2{
+
+    font-size:32px;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.footer-content h2 i{
+
+    margin-right:8px;
+
+}
+
+.footer-content p{
+
+    color:var(--text-light);
+
+    margin-bottom:10px;
+
+}
+
+.footer-content small{
+
+    color:#64748b;
+
+}
+
+
+/* ==========================
+   Card Animation
+========================== */
+
+.movie-card{
+
+    animation:cardFade .7s ease;
+
+}
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+/* =====================================================
+   MovieVault
+   Part 3 - Modal + Scroll Button + Responsive
+=====================================================*/
+
+
+/* ==========================
+   Trailer Modal
+========================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.8);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:5000;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.modal.active{
+
+    display:flex;
+
+}
+
+.modal-content{
+
+    position:relative;
+
+    width:90%;
+
+    max-width:900px;
+
+    background:#000;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    animation:popup .35s ease;
+
+}
+
+.modal-content iframe{
+
+    width:100%;
+
+    height:500px;
+
+    border:none;
+
+}
+
+.close-btn{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.close-btn:hover{
+
+    background:var(--primary);
+
+}
+
+
+/* ==========================
+   Popup Animation
+========================== */
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* ==========================
+   Scroll To Top Button
+========================== */
+
+#scrollTop{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    display:none;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+#scrollTop:hover{
+
+    transform:translateY(-5px);
+
+    background:var(--primary-hover);
+
+}
+
+#scrollTop.show{
+
+    display:block;
+
+}
+
+
+/* ==========================
+   Light Theme
+========================== */
+
+body.light{
+
+    --bg:#f8fafc;
+
+    --bg2:#ffffff;
+
+    --card:#ffffff;
+
+    --text:#111827;
+
+    --text-light:#475569;
+
+    --border:#dbe4ee;
+
+    background:#f8fafc;
+
+    color:#111827;
+
+}
+
+body.light header{
+
+    background:rgba(255,255,255,.9);
+
+}
+
+body.light .movie-card{
+
+    border:1px solid #e5e7eb;
+
+}
+
+body.light footer{
+
+    background:#e2e8f0;
+
+}
+
+body.light .search-box{
+
+    border:1px solid #d1d5db;
+
+}
+
+
+/* ==========================
+   Hover Animation
+========================== */
+
+button,
+a,
+.movie-card,
+input{
+
+    transition:.3s ease;
+
+}
+
+
+/* ==========================
+   Selection
+========================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:1100px){
+
+.hero-content h1{
+
+    font-size:56px;
+
+}
+
+.movie-grid{
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+}
+
+}
+
+
+
+@media(max-width:900px){
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.nav-menu{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.hero-content h1{
+
+    font-size:46px;
+
+}
+
+.hero-content p{
+
+    font-size:18px;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    justify-content:center;
+
+}
+
+.modal-content iframe{
+
+    height:420px;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.hero{
+
+    padding-top:170px;
+
+}
+
+.hero-content h1{
+
+    font-size:38px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+}
+
+.search-box{
+
+    flex-direction:column;
+
+    border-radius:18px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+}
+
+.search-box button{
+
+    width:100%;
+
+    height:60px;
+
+}
+
+.movie-grid{
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+}
+
+.modal-content iframe{
+
+    height:320px;
+
+}
+
+}
+
+
+
+@media(max-width:600px){
+
+.logo span{
+
+    font-size:22px;
+
+}
+
+.nav-menu{
+
+    gap:18px;
+
+}
+
+.section{
+
+    width:94%;
+
+}
+
+.section-header h2{
+
+    font-size:28px;
+
+}
+
+.movie-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.movie-poster img{
+
+    height:420px;
+
+}
+
+.movie-title{
+
+    min-height:auto;
+
+}
+
+.footer-content h2{
+
+    font-size:28px;
+
+}
+
+}
+
+
+
+@media(max-width:420px){
+
+.hero-content h1{
+
+    font-size:30px;
+
+}
+
+.hero-content p{
+
+    font-size:15px;
+
+}
+
+.search-box input{
+
+    padding:18px;
+
+}
+
+.modal-content iframe{
+
+    height:220px;
+
+}
+
+#scrollTop{
+
+    width:48px;
+
+    height:48px;
+
+}
+
+}

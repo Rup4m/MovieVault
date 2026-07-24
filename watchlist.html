@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MovieVault | Watch Later</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-clapperboard"></i>
+
+                <span>MovieVault</span>
+
+            </div>
+
+            <ul class="nav-menu">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="index.html#trending">Trending</a></li>
+
+                <li><a href="index.html#trailers">Trailers</a></li>
+
+                <li>
+
+                    <a href="watchlist.html">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        Watch Later
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <div class="nav-right">
+
+                <button id="themeBtn">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= PAGE TITLE ================= -->
+
+    <section class="hero" style="min-height:40vh;">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>
+
+                ❤️ My Watch Later
+
+            </h1>
+
+            <p>
+
+                Movies you saved to watch later.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTROLS ================= -->
+
+    <section class="section">
+
+        <div class="section-header">
+
+            <h2>
+
+                Saved Movies
+
+            </h2>
+
+            <button id="clearWatchlist" class="watch-btn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Clear All
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= MOVIES ================= -->
+
+    <section class="section">
+
+        <div class="movie-grid"
+
+             id="watchlistContainer">
+
+        </div>
+
+    </section>
+
+    <!-- ================= EMPTY STATE ================= -->
+
+    <section
+
+        id="emptyState"
+
+        class="empty-state"
+
+        style="display:none;">
+
+        <i class="fa-solid fa-film"></i>
+
+        <h2>
+
+            Your Watchlist is Empty
+
+        </h2>
+
+        <p>
+
+            Search movies and add them to your Watch Later list.
+
+        </p>
+
+        <br>
+
+        <a href="index.html">
+
+            <button class="watch-btn">
+
+                Browse Movies
+
+            </button>
+
+        </a>
+
+    </section>
+
+    <!-- ================= TRAILER MODAL ================= -->
+
+    <div
+
+        class="modal"
+
+        id="trailerModal">
+
+        <div class="modal-content">
+
+            <button
+
+                id="closeModal"
+
+                class="close-btn">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+            <iframe
+
+                id="youtubePlayer"
+
+                src=""
+
+                allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </div>
+
+    <!-- ================= SCROLL BUTTON ================= -->
+
+    <button id="scrollTop">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>
+
+                <i class="fa-solid fa-clapperboard"></i>
+
+                MovieVault
+
+            </h2>
+
+            <p>
+
+                Discover • Save • Watch Later
+
+            </p>
+
+            <small>
+
+                © 2026 MovieVault
+
+            </small>
+
+        </div>
+
+    </footer>
+
+    <!-- ================= JS ================= -->
+
+    <script src="js/api.js"></script>
+
+    <script src="watchlist.js"></script>
+
+</body>
+
+</html>
