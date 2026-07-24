@@ -1359,99 +1359,81 @@ input{
 
 
 
-@media(max-width:768px){
+/* =====================================================
+   Optimized Mobile Overrides
+===================================================== */
 
-.hero{
-    padding-top: 140px;
-    padding-bottom: 40px;
-    /* Adjusting background behavior for vertical viewports */
-    background-position: 55% center; 
-    background-attachment: scroll;
+@media(max-width: 768px) {
+    .hero {
+        /* Reduce padding and drop vertical height to fit content nicely */
+        min-height: 70vh; 
+        padding: 100px 5% 40px;
+        background-position: center 30%; /* Pulls the background image detail up */
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        padding: 0 10px; /* Prevents text from touching edge of mobile screen */
+    }
+
+    .search-box {
+        flex-direction: column;
+        border-radius: 14px;
+        width: 100%;
+        max-width: 100%;
+        gap: 0;
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 15px;
+        text-align: center; /* Centers placeholder text nicely on mobile */
+    }
+
+    .search-box button {
+        width: 100%;
+        height: 52px;
+        border-radius: 0 0 14px 14px; /* Matches bottom corners of search wrapper */
+    }
+
+    /* Standardizes card grids for portrait viewports */
+    .movie-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+    }
+
+    .modal-content iframe {
+        height: 280px;
+    }
 }
 
-.hero-content h1{
-    font-size:38px;
-}
+@media(max-width: 48px) {
+    .hero {
+        min-height: 65vh;
+        padding: 90px 4% 30px;
+    }
 
-.hero-content p{
-    font-size:16px;
-}
+    .hero-content h1 {
+        font-size: 26px;
+    }
 
-.search-box{
-    flex-direction:column;
-    border-radius:18px;
-}
-
-.search-box input{
-    width:100%;
-}
-
-.search-box button{
-    width:100%;
-    height:60px;
-}
-
-.movie-grid{
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-}
-
-.modal-content iframe{
-    height:320px;
-}
-
-}
-
-
-@media(max-width:600px){
-
-.logo span{
-
-    font-size:22px;
-
-}
-
-.nav-menu{
-
-    gap:18px;
-
-}
-
-.section{
-
-    width:94%;
-
-}
-
-.section-header h2{
-
-    font-size:28px;
-
-}
-
-.movie-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.movie-poster img{
-
-    height:420px;
-
-}
-
-.movie-title{
-
-    min-height:auto;
-
-}
-
-.footer-content h2{
-
-    font-size:28px;
-
-}
-
+    .hero-content p {
+        font-size: 13px;
+    }
 }
 
 
