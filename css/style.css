@@ -314,7 +314,7 @@ header{
 
 .hero{
 
-    background:url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1920&auto=format&fit=crop");
+   background: url("https://images.unsplash.com/photo-1595769816263-9b910be24d5f?q=80&w=1920&auto=format&fit=crop");
 
     background-size:cover;
 
@@ -1362,59 +1362,44 @@ input{
 @media(max-width:768px){
 
 .hero{
-
-    padding-top:170px;
-
+    padding-top: 140px;
+    padding-bottom: 40px;
+    /* Adjusting background behavior for vertical viewports */
+    background-position: 55% center; 
+    background-attachment: scroll;
 }
 
 .hero-content h1{
-
     font-size:38px;
-
 }
 
 .hero-content p{
-
     font-size:16px;
-
 }
 
 .search-box{
-
     flex-direction:column;
-
     border-radius:18px;
-
 }
 
 .search-box input{
-
     width:100%;
-
 }
 
 .search-box button{
-
     width:100%;
-
     height:60px;
-
 }
 
 .movie-grid{
-
     grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-
 }
 
 .modal-content iframe{
-
     height:320px;
-
 }
 
 }
-
 
 
 @media(max-width:600px){
@@ -1473,36 +1458,30 @@ input{
 
 @media(max-width:420px){
 
+.hero {
+    padding-top: 120px;
+    min-height: 85vh; /* Prevents awkward excessive stretching */
+}
+
 .hero-content h1{
-
     font-size:30px;
-
 }
 
 .hero-content p{
-
     font-size:15px;
-
 }
 
 .search-box input{
-
     padding:18px;
-
 }
 
 .modal-content iframe{
-
     height:220px;
-
 }
 
 #scrollTop{
-
     width:48px;
-
     height:48px;
-
 }
 
 }
