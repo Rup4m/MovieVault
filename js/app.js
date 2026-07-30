@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     loadTrendingMovies();
+    initScrollReveal(); // Add this line here
 
 });
 
